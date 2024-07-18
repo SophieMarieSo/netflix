@@ -7,7 +7,7 @@ export default function AppLayout() {
         <div>
             <Navbar expand='lg' className='bg-body-tertiary'>
                 <Container fluid>
-                    <Navbar.Brand href='#'>Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand href='#'>Netflix</Navbar.Brand>
                     <Navbar.Toggle aria-controls='navbarScroll' />
                     <Navbar.Collapse id='navbarScroll'>
                         <Nav
@@ -16,7 +16,7 @@ export default function AppLayout() {
                             navbarScroll
                         >
                             <Nav.Link href='#action1'>Home</Nav.Link>
-                            <Nav.Link href='#action2'>Link</Nav.Link>
+                            <Nav.Link href='#action2'>Movies</Nav.Link>
                         </Nav>
                         <Form className='d-flex'>
                             <Form.Control
