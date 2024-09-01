@@ -11,7 +11,7 @@ export default function AppLayout() {
         <Container fluid>
           <Navbar.Brand href='/'>
             <Image
-              width={50}
+              width={70}
               height={40}
               src='https://www.liderlogo.es/wp-content/uploads/2022/12/pasted-image-0-6-1024x576.png'
             />
