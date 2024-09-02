@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './components/Banner/Banner';
+import PopularMoviesSlide from './components/PopularMoviesSlide/PopularMoviesSlide';
 
 // 1. banner -> popular movie의 첫번째 영화
 // 2. popular movie
@@ -9,6 +10,7 @@ export default function HomePage() {
   return (
     <div>
       <Banner />
+      <PopularMoviesSlide />
     </div>
   );
 }
