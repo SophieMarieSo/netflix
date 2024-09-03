@@ -27,7 +27,7 @@ export default function PopularMoviesSlide() {
         itemClass='movie-slider p-1'
         responsive={responsive}
       >
-        {data?.results.map((movie, idx) => (
+        {data && data.results.map((movie, idx) => (
           <MovieCard key={idx} movie={movie} />
         ))}
       </Carousel>
