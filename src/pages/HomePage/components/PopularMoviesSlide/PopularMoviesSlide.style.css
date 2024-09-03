@@ -1,0 +1,10 @@
+.carousel-container {
+  overflow: hidden;
+  height: 440px;
+}
+
+.title {
+  padding: 0 2rem;
+  font-size: 36px;
+  font-weight: 500;
+}

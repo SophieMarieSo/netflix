@@ -5,6 +5,7 @@ import { Alert, Spinner } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import MovieCard from '../MovieCard/MovieCard';
+import './PopularMoviesSlide.style.css';
 
 export default function PopularMoviesSlide() {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
@@ -19,7 +20,7 @@ export default function PopularMoviesSlide() {
 
   return (
     <div>
-      <h3>Popular Movies</h3>
+      <div className='title'>Popular Movies</div>
       <Carousel
         infinite={true}
         centerMode={true}
@@ -27,9 +28,13 @@ export default function PopularMoviesSlide() {
         itemClass='movie-slider p-1'
         responsive={responsive}
       >
-        {data ? data.results.map((movie, idx) => (
-          <MovieCard key={idx} movie={movie} />
-        )) : <div />}
+        {data ? (
+          data.results.map((movie, idx) => (
+            <MovieCard key={idx} movie={movie} />
+          ))
+        ) : (
+          <div />
+        )}
       </Carousel>
     </div>
   );
