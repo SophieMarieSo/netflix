@@ -21,7 +21,7 @@ export default function MovieCard({ movie }) {
       className='movie-card'
     >
       <div className='overlay'>
-        <h3>{movie.title}</h3>
+        <h4>{movie.title}</h4>
         {movie.genre_ids.map((genre, idx) => (
           <Badge key={idx} bg='danger' className='badge'>
             {genre}
