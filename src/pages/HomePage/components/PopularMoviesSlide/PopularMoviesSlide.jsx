@@ -31,7 +31,6 @@ export default function PopularMoviesSlide() {
           <MovieCard key={idx} movie={movie} />
         ))}
       </Carousel>
-      ;
     </div>
   );
 }
