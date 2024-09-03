@@ -28,8 +28,8 @@ export default function MovieCard({ movie }) {
           </Badge>
         ))}
         <div className='card-desc'>
-          <div>
-            <FontAwesomeIcon icon={faStar} className='movie-rate' />
+          <div className='rate'>
+            <FontAwesomeIcon icon={faStar} className='rate-icon' />
             {movie.vote_average.toFixed(1)}
           </div>
           <div className='popularity'>

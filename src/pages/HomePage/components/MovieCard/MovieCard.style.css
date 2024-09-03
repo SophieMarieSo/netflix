@@ -36,14 +36,20 @@
 .card-desc {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 75%;
   font-size: 13px;
   position: absolute;
   bottom: 8px;
 }
 
-.movie-rate {
-  padding-right: 4px;
+.rate {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.rate-icon {
   color: yellow;
 }
 
