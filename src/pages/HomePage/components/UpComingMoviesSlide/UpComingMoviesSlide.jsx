@@ -15,7 +15,7 @@ export default function UpComingMoviesSlide() {
   }
 
   return (
-    <div>
+    <div style={{ marginBottom: '2rem' }}>
       <MovieSlider title={'Up Coming Movies'} movies={data} />
     </div>
   );
