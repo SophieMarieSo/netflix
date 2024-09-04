@@ -26,7 +26,7 @@ export default function AppLayout() {
               style={{ maxHeight: '100px' }}
             >
               <Nav.Link href='/'>Home</Nav.Link>
-              <Nav.Link href='/movies'>Movies</Nav.Link>
+              <Nav.Link onClick={() => navigate('/movies')}>Movies</Nav.Link>
             </Nav>
             <Form
               className='d-flex'
