@@ -16,9 +16,9 @@ export default function MovieCard({ movie }) {
   const showGenre = (genreIdList) => {
     if (!genreIdList) return [];
 
-    return genreIdList.map(
-      (id) => genreData?.find((genre) => genre.id === id).name
-    );
+    return genreIdList
+      .map((id) => genreData?.find((genre) => genre.id === id).name)
+      .slice(0, 4);
   };
 
   return (

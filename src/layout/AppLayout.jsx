@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Form, Image, Nav, Navbar } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function AppLayout() {
+  const [keyword, setKeyword] = useState('');
+  const navigate = useNavigate();
+
   return (
     <div>
       <Navbar expand='lg' bg='black' data-bs-theme='dark'>
@@ -25,15 +28,24 @@ export default function AppLayout() {
               <Nav.Link href='/'>Home</Nav.Link>
               <Nav.Link href='/movies'>Movies</Nav.Link>
             </Nav>
-            <Form className='d-flex'>
+            <Form
+              className='d-flex'
+              onSubmit={(e) => {
+                e.preventDefault();
+                navigate(`/movies?q=${keyword}`);
+                setKeyword('');
+              }}
+            >
               <Form.Control
                 type='search'
                 placeholder='Search'
                 className='me-2'
                 aria-label='Search'
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
               />
 
-              <Button variant='outline-danger'>
+              <Button variant='outline-danger' type='submit'>
                 <FontAwesomeIcon icon={faSearch} />
               </Button>
             </Form>
