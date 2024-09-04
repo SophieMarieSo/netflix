@@ -12,6 +12,15 @@ import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 export default function MovieCard({ movie }) {
   const { data: genreData } = useMovieGenreQuery();
+
+  const showGenre = (genreIdList) => {
+    if (!genreIdList) return [];
+
+    return genreIdList.map(
+      (id) => genreData?.find((genre) => genre.id === id).name
+    );
+  };
+
   return (
     <div
       style={{
@@ -24,7 +33,7 @@ export default function MovieCard({ movie }) {
     >
       <div className='overlay'>
         <h4>{movie.title}</h4>
-        {movie.genre_ids.map((genre, idx) => (
+        {showGenre(movie.genre_ids)?.map((genre, idx) => (
           <Badge key={idx} bg='danger' className='badge'>
             {genre}
           </Badge>
