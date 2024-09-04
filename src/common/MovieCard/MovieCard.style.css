@@ -76,6 +76,11 @@
 }
 
 @media (max-width: 480px) {
+  .movie-card {
+    width: 180px;
+    height: 180px;
+  }
+
   .movie-card:hover {
     transform: translateZ(20px);
     z-index: 2;
