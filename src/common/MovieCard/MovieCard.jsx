@@ -8,8 +8,10 @@ import {
   faUserGroup,
   faShieldHeart,
 } from '@fortawesome/free-solid-svg-icons';
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 export default function MovieCard({ movie }) {
+  const { data: genreData } = useMovieGenreQuery();
   return (
     <div
       style={{
