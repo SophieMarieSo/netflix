@@ -18,11 +18,11 @@ export default function MoviesPage() {
   );
 
   if (isLoading) {
-    <Spinner animation='border' />;
+    return <Spinner animation='border' variant="danger" />;
   }
 
   if (isError) {
-    <Alert variant={'danger'}>{error.message}</Alert>;
+    return <Alert variant={'danger'}>{error.message}</Alert>;
   }
 
   const handlePageClick = ({ selected }) => {
@@ -44,12 +44,12 @@ export default function MoviesPage() {
             ))}
           </Row>
           <ReactPaginate
-            nextLabel='next >'
+            nextLabel='>'
             onPageChange={handlePageClick}
             pageRangeDisplayed={3}
             marginPagesDisplayed={2}
             pageCount={data?.total_pages} // 전체페이지 수
-            previousLabel='< previous'
+            previousLabel='<'
             pageClassName='page-item'
             pageLinkClassName='page-link'
             previousClassName='page-item'

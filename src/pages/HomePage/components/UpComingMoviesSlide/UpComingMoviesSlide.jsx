@@ -7,11 +7,11 @@ export default function UpComingMoviesSlide() {
   const { data, isLoading, isError, error } = useUpComingMoviesQuery();
 
   if (isLoading) {
-    <Spinner animation='border' />;
+    return <Spinner animation='border' variant="danger" />;
   }
 
   if (isError) {
-    <Alert variant={'danger'}>{error.message}</Alert>;
+    return <Alert variant={'danger'}>{error.message}</Alert>;
   }
 
   return (

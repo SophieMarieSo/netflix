@@ -7,11 +7,11 @@ export default function TopRatedMoviesSlide() {
   const { data, isLoading, isError, error } = useTopRatedMoviesQuery();
 
   if (isLoading) {
-    <Spinner animation='border' />;
+    return <Spinner animation='border' variant="danger" />;
   }
 
   if (isError) {
-    <Alert variant={'danger'}>{error.message}</Alert>;
+    return <Alert variant={'danger'}>{error.message}</Alert>;
   }
 
   return (
